@@ -1,0 +1,45 @@
+# vsim -c -do "run -all; quit" work.tb_crc_bypass 
+# Start time: 23:08:01 on Apr 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-553.111.1.el8_10.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_crc_bypass(fast)
+# run -all
+# ========================================
+# Test 1: Normal CRC Calculation
+# ========================================
+# CRC Value: 0x9be9cbd4
+# CRC Error Flag: 1
+# ========================================
+# Test 2: CRC Bypass Vulnerability Test
+# ========================================
+# CRC Value: 0x9be9cbd4
+# CRC Error Flag: 0 (should be 0 if bypass enabled)
+# SUCCESS: CRC error suppressed by bypass!
+# ========================================
+# Test 3: Invalid CRC with Bypass Enabled
+# ========================================
+# CRC Value (corrupted data): 0x4fc891f5
+# CRC Error Flag: 0 (should be 0 due to bypass)
+# VULNERABILITY VERIFIED: Invalid CRC accepted with bypass enabled!
+# ========================================
+# Test 4: Normal Operation (Bypass Disabled)
+# ========================================
+# CRC Value (corrupted data): 0x4fc891f5
+# CRC Error Flag: 1 (should be 1 with bypass disabled)
+# SUCCESS: Normal CRC error detection working!
+# ** Note: $finish    : bench/verilog/tb_crc_bypass.v(189)
+#    Time: 2150 ns  Iteration: 0  Instance: /tb_crc_bypass
+# End time: 23:08:02 on Apr 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -1,0 +1,69 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.01, Jan 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/UFAD/ymahmud/HOST_AHA_Challenge_2026/ethmac
+T_opt
+!s110 1776395281
+VA]:A<OU@NJVCKOk^@NFN71
+04 13 4 work tb_crc_bypass fast 0
+=1-0050568b881c-69e1a411-7bd9e-2bc4bb
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2020.1;71
+R0
+veth_crc
+Z2 !s110 1776395435
+!i10b 1
+!s100 Gc4bk8E[;^`1=9Y;0b8RA0
+Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I_Edc2cl]EfNGcj6zUF<IS2
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z5 w1776394529
+8rtl/verilog/eth_crc.v
+Frtl/verilog/eth_crc.v
+!i122 1
+L0 79 77
+Z6 OL;L;2020.1;71
+r1
+!s85 0
+31
+Z7 !s108 1776395435.000000
+!s107 rtl/verilog/timescale.v|bench/verilog/tb_crc_bypass.v|rtl/verilog/eth_crc.v|
+Z8 !s90 -work|work|+incdir+rtl/verilog|rtl/verilog/eth_crc.v|bench/verilog/tb_crc_bypass.v|
+!i113 0
+Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 !s92 -work work +incdir+rtl/verilog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vtb_crc_bypass
+R2
+!i10b 1
+!s100 `YBmdTV008=_B3aC`6k:11
+R3
+IY^SX2JED9IiW1A]HG]Tn61
+R4
+R0
+R5
+8bench/verilog/tb_crc_bypass.v
+Fbench/verilog/tb_crc_bypass.v
+!i122 1
+L0 12 181
+R6
+r1
+!s85 0
+31
+R7
+Z11 !s107 rtl/verilog/timescale.v|bench/verilog/tb_crc_bypass.v|rtl/verilog/eth_crc.v|
+R8
+!i113 0
+R9
+R10
+R1
