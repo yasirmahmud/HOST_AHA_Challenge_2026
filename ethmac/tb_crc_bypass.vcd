@@ -1,5 +1,5 @@
 $date
-	Thu Apr 16 23:08:02 2026
+	Thu Apr 16 23:22:42 2026
 $end
 $version
 	ModelSim Version 2020.1
@@ -19,7 +19,3 @@ $enddefinitions $end
 $dumpvars
 0!
 $end
-#650
-1!
-#1650
-0!

@@ -1,0 +1,45 @@
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -c -do "run -all; quit -f" work.tb_addr_filter_bypass 
+# Start time: 23:47:43 on Apr 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-553.111.1.el8_10.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_addr_filter_bypass(fast)
+# run -all
+# ========================================
+# Test 1: Correct Unicast Address
+# ========================================
+# RxAbort_seen (correct MAC): 0 (should be 0)
+# ========================================
+# Test 2: Incorrect Unicast Address
+# ========================================
+# RxAbort_seen (wrong MAC, bypass disabled): 1 (should be 1)
+# SUCCESS: Incorrect MAC address rejected!
+# ========================================
+# Test 3: Address Filter Bypass Enabled
+# ========================================
+# RxAbort_seen (wrong MAC, bypass ENABLED): 0 (should be 0)
+# VULNERABILITY VERIFIED: Incorrect MAC address ACCEPTED with bypass!
+# ========================================
+# Test 4: Bypass Disabled - Normal Operation
+# ========================================
+# RxAbort_seen (wrong MAC, bypass disabled): 1 (should be 1)
+# SUCCESS: Normal address filtering restored!
+# ** Note: $finish    : /ecel/UFAD/ymahmud/HOST_AHA_Challenge_2026/ethmac/bench/verilog/tb_addr_filter_bypass.v(346)
+#    Time: 2310 ns  Iteration: 0  Instance: /tb_addr_filter_bypass
+# End time: 23:47:44 on Apr 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

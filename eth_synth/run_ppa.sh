@@ -8,6 +8,7 @@ echo "Starting automated PPA analysis for Ethernet MAC..."
 # Create output directories
 mkdir -p ./metrics
 mkdir -p ./synth_output
+mkdir -p ./synth_outputs
 
 # Yosys for synthesis to skywater130
 echo "Running Yosys Synthesis (SkyWater 130nm)..."

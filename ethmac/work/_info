@@ -14,56 +14,113 @@ T_opt
 VA]:A<OU@NJVCKOk^@NFN71
 04 13 4 work tb_crc_bypass fast 0
 =1-0050568b881c-69e1a411-7bd9e-2bc4bb
-o-quiet -auto_acc_if_foreign -work work
-Z1 tCvgOpt 0
+Z1 o-quiet -auto_acc_if_foreign -work work
+Z2 tCvgOpt 0
 n@_opt
-OL;O;2020.1;71
+Z3 OL;O;2020.1;71
 R0
+T_opt1
+!s110 1776396166
+VGz:93U:8Q1:MlFZ8W]2mI2
+04 21 4 work tb_addr_filter_bypass fast 0
+=1-0050568b881c-69e1a785-e081e-2c066e
+R1
+R2
+n@_opt1
+R3
 veth_crc
-Z2 !s110 1776395435
+Z4 !s110 1776396158
 !i10b 1
 !s100 Gc4bk8E[;^`1=9Y;0b8RA0
-Z3 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z5 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I_Edc2cl]EfNGcj6zUF<IS2
-Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z6 VDg1SIo80bB@j0V0VzS_@n1
 R0
-Z5 w1776394529
+Z7 w1776394529
 8rtl/verilog/eth_crc.v
 Frtl/verilog/eth_crc.v
-!i122 1
+!i122 6
 L0 79 77
-Z6 OL;L;2020.1;71
+Z8 OL;L;2020.1;71
 r1
 !s85 0
 31
-Z7 !s108 1776395435.000000
-!s107 rtl/verilog/timescale.v|bench/verilog/tb_crc_bypass.v|rtl/verilog/eth_crc.v|
-Z8 !s90 -work|work|+incdir+rtl/verilog|rtl/verilog/eth_crc.v|bench/verilog/tb_crc_bypass.v|
+Z9 !s108 1776396158.000000
+Z10 !s107 rtl/verilog/timescale.v|bench/verilog/tb_crc_bypass.v|rtl/verilog/eth_crc.v|
+Z11 !s90 -work|work|+incdir+rtl/verilog|rtl/verilog/eth_crc.v|bench/verilog/tb_crc_bypass.v|
 !i113 0
-Z9 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z10 !s92 -work work +incdir+rtl/verilog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R1
-vtb_crc_bypass
+Z12 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z13 !s92 -work work +incdir+rtl/verilog -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
+veth_rxaddrcheck
+Z14 !s110 1776396165
+!i10b 1
+!s100 1Wld`YGYIQfgTj<HfNTj50
+R5
+ILEgaBoGoAQHMUkW4bf_EA2
+R6
+R0
+R7
+8rtl/verilog/eth_rxaddrcheck.v
+Frtl/verilog/eth_rxaddrcheck.v
+!i122 7
+L0 75 142
+R8
+r1
+!s85 0
+31
+Z15 !s108 1776396165.000000
+Z16 !s107 rtl/verilog/timescale.v|bench/verilog/tb_addr_filter_bypass.v|rtl/verilog/eth_rxaddrcheck.v|
+Z17 !s90 -work|work|+incdir+rtl/verilog|rtl/verilog/eth_rxaddrcheck.v|bench/verilog/tb_addr_filter_bypass.v|
+!i113 0
+R12
+R13
+R2
+vtb_addr_filter_bypass
+R14
+!i10b 1
+!s100 4<1EXNg[]kWa0BGB[7Oee2
+R5
+I9dj=nZ19k06egSKKWCMMD1
+R6
+R0
+w1776394641
+8bench/verilog/tb_addr_filter_bypass.v
+Fbench/verilog/tb_addr_filter_bypass.v
+!i122 7
+L0 12 323
+R8
+r1
+!s85 0
+31
+R15
+R16
+R17
+!i113 0
+R12
+R13
+R2
+vtb_crc_bypass
+R4
 !i10b 1
 !s100 `YBmdTV008=_B3aC`6k:11
-R3
-IY^SX2JED9IiW1A]HG]Tn61
-R4
-R0
 R5
+IY^SX2JED9IiW1A]HG]Tn61
+R6
+R0
+R7
 8bench/verilog/tb_crc_bypass.v
 Fbench/verilog/tb_crc_bypass.v
-!i122 1
+!i122 6
 L0 12 181
-R6
+R8
 r1
 !s85 0
 31
-R7
-Z11 !s107 rtl/verilog/timescale.v|bench/verilog/tb_crc_bypass.v|rtl/verilog/eth_crc.v|
-R8
-!i113 0
 R9
 R10
-R1
+R11
+!i113 0
+R12
+R13
+R2

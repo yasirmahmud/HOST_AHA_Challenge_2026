@@ -24,5 +24,5 @@ tee -o ./metrics/timing_report.txt ltp
 tee -o ./metrics/area_report.txt stat -liberty ./sky130_fd_sc_hd__tt_025C_1v80.lib
 
 # Write out the final synthesized netlist for OpenSTA
-write_verilog ./synth_outputs/eth_synth_sky130.v
-
+# Use -simple-lhs to keep assignments parser-friendly for older STA builds.
+write_verilog -noattr -simple-lhs ./synth_outputs/eth_synth_sky130.v

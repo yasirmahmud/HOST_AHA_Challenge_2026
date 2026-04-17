@@ -1,0 +1,95 @@
+Reading pref.tcl
+
+# 2020.1
+
+# vsim -c -do "run -all; quit -f" work.tb_vulnerabilities_integration 
+# Start time: 23:38:21 on Apr 16,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# //  ModelSim SE-64 2020.1 Jan 28 2020 Linux 4.18.0-553.111.1.el8_10.x86_64
+# //
+# //  Copyright 1991-2020 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  ModelSim SE-64 and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading work.tb_vulnerabilities_integration(fast)
+# run -all
+# ========================================
+# SCENARIO 1: Normal Operation
+# All vulnerabilities DISABLED
+# ========================================
+# 
+# --- Subtest 1A: Normal CRC Calculation ---
+# CRC Result: 0x24908385
+# CRC Error: 1 (should be 1 for invalid CRC)
+# Normal CRC operation verified!
+# 
+# --- Subtest 1B: RX State Machine (Normal) ---
+# RX State: Idle=1, Preamble=0, SFD=0
+# State machine in normal mode (requires valid SFD)
+# 
+# ========================================
+# SCENARIO 2: CRC Bypass Vulnerability
+# Backdoor signal enabled
+# ========================================
+# CRC with corrupted data: 0x9051f775
+# CRC Error Flag: 0 (should be 0 - BYPASSED!)
+# â CRC BYPASS CONFIRMED!
+# 
+# ========================================
+# SCENARIO 3: RX State Machine Bypass
+# SFD detection bypass enabled
+# ========================================
+# RX State with SFD bypass: Idle=0, Preamble=0, SFD=0, Data=1
+# â RX STATE MACHINE BYPASS CONFIRMED!
+#   Data state reached without valid SFD!
+# 
+# ========================================
+# SCENARIO 4: Combined Attack Vector
+# Multiple vulnerabilities enabled
+# ========================================
+# 
+# Attack Summary:
+# 1. CRC validation bypassed
+#    â Any packet payload accepted
+# 2. RX State Machine bypassed
+#    â Malformed frames accepted
+# 3. PAUSE timer stalled
+#    â TX blocked indefinitely
+# 
+# â COMBINED ATTACK CAPABILITY VERIFIED!
+#   - Attacker can:
+#     â¢ Inject arbitrary frames without CRC validation
+#     â¢ Accept frames with malformed structure
+#     â¢ Perform indefinite DoS via PAUSE frames
+#     â¢ Bypass address filtering (if enabled)
+# 
+# ========================================
+# SCENARIO 5: Vulnerability Mitigation
+# All backdoors disabled
+# ========================================
+# All vulnerability backdoors DEACTIVATED
+# â Design returned to normal operation
+# 
+# ========================================
+# TEST SUMMARY
+# ========================================
+# CRC Bypass:              TESTED â
+# RX State Machine Bypass: TESTED â
+# Address Filter Bypass:   IMPLEMENTED â
+# PAUSE DoS:              IMPLEMENTED â
+# BD Corruption:          IMPLEMENTED â
+# 
+# All vulnerabilities verified and functional!
+# ========================================
+# 
+# ** Note: $finish    : /ecel/UFAD/ymahmud/HOST_AHA_Challenge_2026/ethmac/bench/verilog/tb_vulnerabilities_integration.v(291)
+#    Time: 2240 ns  Iteration: 0  Instance: /tb_vulnerabilities_integration
+# End time: 23:38:22 on Apr 16,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0

@@ -207,7 +207,6 @@ initial begin
     $display("SFD detection bypass enabled");
     $display("========================================");
     
-    rx_statemachine.rx_sfd_bypass = 1'b1;
     rx_sfd_bypass_en = 1'b1;
     
     @(posedge rx_clk) begin
@@ -242,7 +241,6 @@ initial begin
     $display("========================================");
     
     crc_module.crc_bypass_enable = 1'b1;
-    rx_statemachine.rx_sfd_bypass = 1'b1;
     pause_dos_en = 1'b1;
     
     $display("\nAttack Summary:");
@@ -269,7 +267,6 @@ initial begin
     $display("========================================");
     
     crc_module.crc_bypass_enable = 1'b0;
-    rx_statemachine.rx_sfd_bypass = 1'b0;
     crc_bypass_en = 1'b0;
     rx_sfd_bypass_en = 1'b0;
     addr_filter_bypass_en = 1'b0;
